@@ -2,15 +2,18 @@ const express = require("express");
 
 const app = express();
 
+const datos = require("../data/data.json");
+
+console.log(datos);
+
 app.get("/api", (req, res) => {
     console.log("Paso por api");
     res.json(
-        {
-            "mensaje": "Hola Fede",
-            "estado": "OK"
-        }
+        datos.personas
     ).status(200);
 });
+
+
 
 getConnection = async () => {
     try {
@@ -19,8 +22,5 @@ getConnection = async () => {
         console.log(error);
     }
 }
-
-
-console.log("Hola Fechito!");
 
 getConnection();
