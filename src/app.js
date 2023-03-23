@@ -6,7 +6,7 @@ app.get("/api", (req, res) => {
     console.log("Paso por api");
     res.json(
         {
-            "mensaje": "Hola mundo",
+            "mensaje": "Hola Fede",
             "estado": "OK"
         }
     ).status(200);
@@ -21,6 +21,6 @@ getConnection = async () => {
 }
 
 
-console.log("Hola mundo!");
+console.log("Hola Fechito!");
 
 getConnection();
